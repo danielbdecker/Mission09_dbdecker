@@ -33,6 +33,8 @@ namespace Mission09_dbdecker
             });
             services.AddScoped<IMission09_dbdeckerRepository, EFMission09_dbdeckerRepository>();
             services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +52,7 @@ namespace Mission09_dbdecker
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

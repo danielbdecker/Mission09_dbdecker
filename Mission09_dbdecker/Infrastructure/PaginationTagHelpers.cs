@@ -50,6 +50,7 @@ namespace Mission09_dbdecker.Infrastructure
                         i == PageNumber.CurrentPage ? PageClassSelected : PageClassNormal
                     );
                 }
+                tb.AddCssClass(PageClass);
                 tb.InnerHtml.Append(i.ToString());
                 final.InnerHtml.AppendHtml(tb);
             }
