@@ -1,13 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
 }
 
 @model Book
 
     <div class="card card-outline-primary m-1 p-1">
         <div class="bg-light p-1">
+            @* My extra bootstrap stuff are in the h5 and h6 tags in this div *@
             <h5 class="card-title">@Model.Title</h5>
             <span class="badge badge-pill badge-primary bg-dark" style="float:right">
                 <small>Price: @Model.Price.ToString("c")</small>
